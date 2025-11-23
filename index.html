@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrushikesh Mohite | Robotics & Control Systems Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background-color: white;
+            border-left: 4px solid #3b82f6; /* Blue border for a modern look */
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+        }
+        .section-header {
+            border-bottom: 2px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
+    <header class="bg-blue-600 text-white shadow-lg p-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-center sm:text-left">
+                <h1 class="text-4xl font-extrabold tracking-tight">HRUSHIKESH VITHAL MOHITE</h1>
+                <p class="text-xl mt-1 opacity-90">B.Tech Mechanical Engineering, IIT Bombay | Aspiring Roboticist</p>
+            </div>
+            <div class="mt-4 sm:mt-0 text-center sm:text-right">
+                <p class="text-sm">Email: hrushikeshvm.1212@gmail.com</p>
+                <p class="text-sm">Phone: (+91)9403908250</p>
+                <!-- Placeholder for social/GitHub link -->
+                <p class="text-sm mt-1">
+                    <a href="#" class="hover:text-yellow-300 font-medium transition duration-200">GitHub Profile (Link Here)</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+
+        <!-- Research Interests -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 section-header pb-2">Research Focus</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold">Soft & Compliant Mechanisms</span>
+                <span class="px-4 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold">Reinforcement Learning for Control</span>
+                <span class="px-4 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold">Agricultural Robotics</span>
+                <span class="px-4 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold">Data-Driven Control</span>
+                <span class="px-4 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold">Robot Safety</span>
+            </div>
+        </section>
+
+        <!-- Education & Academics -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 section-header pb-2">Education & Excellence</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <p class="text-xl font-semibold text-gray-900">Indian Institute of Technology Bombay (IIT Bombay)</p>
+                <p class="text-lg text-gray-600 mt-1">B.Tech in Mechanical Engineering | Minor in Systems and Controls Engineering</p>
+                <p class="text-md text-blue-600 mt-2">
+                    <span class="font-bold">CGPA: 8.68/10</span>
+                    <span class="mx-3 text-gray-400">|</span>
+                    <span class="font-bold">Key Achievement:</span> Secured Mitacs Globalink Research Internship at University of Waterloo (2023)
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Robotics Projects (Highlighted Section) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 section-header pb-2">Core Robotics & Control Systems Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Compliant Mechanisms (Siemens) -->
+                <div class="project-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 flex justify-between items-start">
+                        <span>Modelling and Control of Compliant Mechanisms</span>
+                        <span class="text-sm font-normal text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full">Internship</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-1">Siemens Technology Division | May '23 - July '23</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2 text-sm">
+                        <li>Ideated innovative technique to increase actuated DOFs of compliant mechanism, enhancing dexterity.</li>
+                        <li>Fine-tuned **control strategy** using the **SOFA soft robotics framework** for virtual validation.</li>
+                        <li>Performed **structural FEA on ANSYS** for system requirements, virtual validation, and material selection.</li>
+                        <li>Manufactured proof-of-concept model via 3D printing; prepared full setup plan for real-scale prototype.</li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold text-sm">View Project Details (Link Placeholder) &rarr;</a>
+                </div>
+
+                <!-- Project 2: Inverted Pendulum (RL) -->
+                <div class="project-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 flex justify-between items-start">
+                        <span>Control of Inverted Pendulum using Reinforcement Learning</span>
+                        <span class="text-sm font-normal text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full">RL/PPO</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-1">Course Project | IIT Bombay | Jan '24 - Apr '24</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2 text-sm">
+                        <li>Employed **Proximal Policy Optimisation (PPO) agent** to achieve complex control objectives.</li>
+                        <li>Crafted a reward function and tuned parameters to ensure fast and stable learning in simulated scenarios.</li>
+                        <li>Successfully achieved stable upright control from **diverse initial conditions**, demonstrating robustness against measurement noise.</li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold text-sm">View Code & Results (Link Placeholder) &rarr;</a>
+                </div>
+
+                <!-- Project 3: Woodpecker Manipulator (Bio-inspired) -->
+                <div class="project-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 flex justify-between items-start">
+                        <span>Woodpecker's Tongue Inspired Flexible Manipulator</span>
+                        <span class="text-sm font-normal text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full">Design/Control</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-1">Research Project | IIT Bombay | Aug '23 - Nov '23</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2 text-sm">
+                        <li>Devised a bio-inspired flexible manipulator model using small linkages to mimic a woodpecker's tongue.</li>
+                        <li>Modelled a gear and flexible pinion mechanism to drive the extension and curvature using DC motors.</li>
+                        <li>Implemented a simple control architecture accessible via a web-app interface for real-time actuation control.</li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold text-sm">View Mechanical Design (Link Placeholder) &rarr;</a>
+                </div>
+
+                <!-- Project 4: TossBot (Kinematics/Dynamics) -->
+                <div class="project-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 flex justify-between items-start">
+                        <span>TossBot: 3 DOF Robotic Manipulator</span>
+                        <span class="text-sm font-normal text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full">Kinematics</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 mt-1">Course Project | IIT Bombay | Jan '23 - Apr '23</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2 text-sm">
+                        <li>Constructed a 3-DOF manipulator capable of tossing objects to specified locations.</li>
+                        <li>Implemented **kinematic and dynamic controllers** to calibrate and interface 3 servo motors with Arduino.</li>
+                        <li>Solved for the optimal trajectory using **inverse kinematics** based on the object's specified landing position.</li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold text-sm">View Kinematic Analysis (Link Placeholder) &rarr;</a>
+                </div>
+            </div>
+            
+            <a href="#full-projects" class="mt-8 inline-block text-lg text-gray-700 hover:text-blue-600 font-semibold">
+                View All Projects and Research Contributions &darr;
+            </a>
+        </section>
+
+
+        <!-- Technical Skills Summary -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 section-header pb-2">Technical Skills</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600">Programming & Languages</h4>
+                        <p class="text-gray-700 mt-1">C/C++, **Python**, MATLAB, Verilog, Octave</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600">Frameworks & Libraries</h4>
+                        <p class="text-gray-700 mt-1">**ROS**, PyTorch, **Tensorflow**, Scikit-Learn, Pandas, SOFA, OpenFOAM</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600">Software & Tools</h4>
+                        <p class="text-gray-700 mt-1">SolidWorks, Fusion 360, ANSYS (FEM), SPENVIS, Paraview, Siemens NX</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Projects and Experience (Anchor for navigation) -->
+        <section id="full-projects" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 section-header pb-2">Additional Research & Experience</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md space-y-6">
+
+                <!-- Additional Robotics/Control -->
+                <div class="border-b pb-4">
+                    <h3 class="text-xl font-semibold text-gray-900">Pose Estimation and Feedback Control of Differential Drive Robots</h3>
+                    <p class="text-sm text-gray-500">Course Project | IIT Bombay | Aug '23 - Nov '23</p>
+                    <p class="text-gray-700 mt-2">Worked on **probabilistic pose estimation** of differential drive robots through motion and measurement models. Implemented **Lyapunov analysis based non-linear feedback control** for full state stabilization of unicycle robots.</p>
+                </div>
+
+                <!-- Industrial Experience -->
+                <div class="border-b pb-4">
+                    <h3 class="text-xl font-semibold text-gray-900">Vehicle and Powertrain NVH Testing of EVs</h3>
+                    <p class="text-sm text-gray-500">Test and Validation Engineer | Bajaj Auto Ltd | Aug '24 - Present</p>
+                    <p class="text-gray-700 mt-2">Investigated the deterioration of EV motor parameters using **vibration signal analysis** for fault diagnosis. **Automated routine data acquisition and analysis** using Python scripts to increase workflow efficiency.</p>
+                </div>
+
+                <!-- Satellite Program -->
+                <div class="border-b pb-4">
+                    <h3 class="text-xl font-semibold text-gray-900">Star Tracker based Attitude Determination System (IIT Bombay Satellite Program)</h3>
+                    <p class="text-sm text-gray-500">Mechanical Subsystem Head | Jun '21 - Apr '23</p>
+                    <p class="text-gray-700 mt-2">Led a 6-member interdisciplinary team; performed static structural, modal, harmonic response, and **random vibration analysis in ANSYS (FEM)** to simulate PSLV launch loads and ensure structural integrity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements and Footer -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 section-header pb-2">Key Achievements</h2>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Secured research internship at **University of Waterloo, Canada**, through the prestigious Mitacs Globalink Research Internship Programme (2023).</li>
+                    <li>Received the **Kishore Vaigyanik Protsahan Yojana (KVPY)** fellowship in SX category from IISc Bangalore (2020).</li>
+                    <li>Demonstrated a frugal device for "Kyphosis Angle Measurement of Thoracic Spine" at the **BIOMEx'24 International Symposium** (2024).</li>
+                    <li>Ranked in the top 1% of candidates in national engineering entrance exams (JEE-Mains: 99.85 percentile).</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2025 Hrushikesh Mohite. Built for Masters Applications.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
