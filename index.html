@@ -68,7 +68,8 @@
     .nav-links a {
       margin-left: 1.1rem;
       font-size: 0.85rem;
-      color: var(--muted);
+      color: var(--text);
+      text-decoration: none;
     }
 
     .nav-links a.active {
@@ -76,6 +77,35 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 4px;
     }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .nav-left a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-name {
+      font-weight: 600;
+    }
+
+    .nav-icon {
+      color: var(--text);
+      font-size: 1rem;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-icon:hover {
+      opacity: 1;
+      color: var(--accent);
+    }
+
 
     /* ===== SECTIONS ===== */
     section {
@@ -104,8 +134,8 @@
     /* ===== HOME ===== */
     #home {
       background:
-        linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.96)),
-        url('assets/images/home/Formals.jpg') center/cover no-repeat;
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.96)),
+        url('assets/images/home/bg.jpg') center/cover no-repeat;
     }
 
     .hero {
@@ -150,14 +180,41 @@
     }
 
     /* ===== GENERIC CARD ===== */
-    .card {
+    /*.card {
       background: var(--card);
       border-radius: 18px;
       border: 1px solid #eee;
       padding: 1.6rem;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }*/
+    
+    .doc-btn {
+      padding: 0.6rem 1.6rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+
+      background: var(--accent);
+      color: white;
+      border: 1px solid var(--accent);
+
+      display: inline-block;
+      transition: all 0.25s ease;
     }
 
+    .doc-btn:hover {
+      opacity: 0.85;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: 1.6rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.08);
@@ -195,6 +252,20 @@
       background: white;
     }
 
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: contents;
+    }
+
+
+    .card-link .horizontal-card {
+      display: grid;                /* 🔥 FORCE layout */
+      grid-template-columns: 140px 1fr;
+      gap: 1.4rem;
+      align-items: center;
+    }
+
 
     /* ===== CONFERENCE / PUBLICATION CARDS ===== */
     .publication-card {
@@ -213,6 +284,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 1.5rem;
+      background: rgba(255, 255, 255, 0.75);
     }
 
     th, td {
@@ -226,12 +298,13 @@
     /* ===== HOBBIES CAROUSEL ===== */
 
     .amazon-carousel {
-      max-width: 360px;
-      margin: 2rem auto 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
+      max-width: calc(320px + 44px * 2 + 1.6rem);
+    margin: 2rem auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
     }
 
     .amazon-track-wrapper {
@@ -254,9 +327,8 @@
       border: 1px solid #eee;
       overflow: hidden;
 
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: stretch;
+      display: grid !important;
+      grid-template-rows: 320px 56px; /* IMAGE + CAPTION */
     }
 
     /* ===== IMAGE WRAPPER ===== */
@@ -300,7 +372,7 @@
 
     .insta-btn {
       width: 44px;
-      height: 32px;
+      height: 80px;
       border-radius: 8px;
       border: 1px solid #e5e5e5;
       background: rgba(255,255,255,0.9);
@@ -319,6 +391,31 @@
       background: var(--accent-soft);
       box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     }
+    
+    /* Contact Icons */
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    .contact-icons a {
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    .contact-icons a:hover {
+      color: var(--accent);
+    }
+
+    .intro-text {
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.6;
+    }
   </style>
 </head>
 
@@ -327,7 +424,21 @@
 
 <nav>
   <div class="nav-container">
-    <div class="nav-logo">Hrushikesh Mohite</div>
+    <!-- <div class="nav-logo">Hrushikesh Mohite</div> -->
+    <div class="nav-left">
+      <a href="https://hrushikesh-1212.github.io/" target="blank">
+      <strong class="nav-name">Hrushikesh Mohite</strong>
+      </a>
+
+      <a href="mailto:your@email.com" class="nav-icon" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/hrushikesh-mohite-7b88961a5/" target="_blank"
+        class="nav-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#publications">Publications</a>
@@ -348,14 +459,20 @@
     <div class="hero-img"></div>
     <div>
       <h1>Hrushikesh Mohite</h1>
-      <p>Hi, I’m Hrushikesh — an NVH Engineer at Bajaj Auto Ltd, currently based in Pune, India. I completed my Bachelor’s degree in Mechanical Engineering in 2024, with a minor in Systems and Controls. During my undergraduate studies, most of my academic and project work revolved around Robotics and Control Systems, the field I aspire to build my long-term career in.
-
-        I am an avid learner and a self-driven engineer who enjoys bridging theory with practical engineering applications. With a strong foundation in mechanical systems, dynamics, and controls, I am motivated to work on challenging problems at the intersection of robotics, automation, and intelligent systems.</p>
+      <p class="intro-text">Hi! Welcome to my page. I am currently working as an NVH Engineer at Bajaj Auto Ltd and am based in Pune, India.
+      I completed my graduation in 2024 with a major in Mechanical Engineering and a minor in Systems and Controls.
+      Most of my undergraduate work focused on Robotics and Control Systems, which align closely with my research aspirations.
+      I am an avid learner, a passionate engineer, and a self-driven individual.</p>
       <div class="capabilities">
         <div class="chip">Control Systems</div>
         <div class="chip">Robot Learning</div>
         <div class="chip">Soft Robotics</div>
-        <div class="chip">Nueroscience</div>
+        <div class="chip">Neuroscience</div>
+      </div>
+
+      <div style="margin-top:1.6rem; display:flex; gap:1rem; flex-wrap:wrap;"></div>
+        <a class="doc-btn" href="https://drive.google.com/file/d/1VQkCqD-yX133KSXEw7lXCMG3qTe7jE6k/view?usp=sharing" target="_blank">Curriculum Vitae</a>
+        <a class="doc-btn" href="https://drive.google.com/file/d/1dBQqzoWSSw8HLhzT6NBx7Pbqo9EXsZLk/view?usp=drive_link" target="_blank">Resume</a>
       </div>
       <!--<div class="highlight-box"></div>-->
     </div>
@@ -366,14 +483,12 @@
   <h2 class="section-title">Conferences & Published Work</h2>
   <div class="card-grid">
     <div class="card publication-card">
-      <h3>BiOMEx 2024 International Symposium on Musculoskeletal Biomechanics</h3>
+      <h3>BiOMEx 2024 International Symposium on Musculoskeletal Biomechanics [2024] </h3>
       <p>Presentation of Frugal Posture Monitoring Device Using Kyphosis Angle</p>
     </div>
-  </div>
-
-    <div class="card-grid">
+  
     <div class="card publication-card">
-      <h3>International Conference on Small Satellites</h3>
+      <h3>International Conference on Small Satellites [2022] </h3>
       <p> Contributed in development of a star tracker which secured 3rd position in project competition on space technology and its applications</p>
     </div>
   </div>
@@ -420,9 +535,14 @@
 </section>
 
 <section id="robotics">
-  <h2 class="section-title">Robotics Projects</h2>
+  <h2 class="section-title">Robotics Projects</h2>   
   <div class="card-grid">
-    <div class="card horizontal-card">
+
+    <a href="https://drive.google.com/file/d/1_xRwmWY4n6nuoIQM_9NQyGcDfsvbdZrM/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
+
+      <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
       <div class="card-img">
@@ -437,9 +557,12 @@
           A novel design for a soft robot using chained links and a flexible pinion-gear mechanism. Developed the manipulator from scratch - designing, manufacturing, actuator interation, and control architecture design.
         </p>
       </div>
-    
+    </a>
     </div>
 
+    <a href="https://drive.google.com/file/d/1h9IkRXfS4TUxCZzMn6H-41wXas4nnp1h/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
 
     <div class="card horizontal-card">
   
@@ -458,7 +581,11 @@
       </div>
     
     </div>
+    </a>
 
+    <a href="https://drive.google.com/file/d/14cSFEWdDJkFTXGYBQjOhXAkHIZNb9YdP/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
 
     <div class="card horizontal-card">
   
@@ -478,7 +605,11 @@
       </div>
     
     </div>
+    </a>
 
+    <a href="https://drive.google.com/file/d/1493Nh8OwOqgmQXDjgnCr816Rub2AsYVG/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
 
     <div class="card horizontal-card">
   
@@ -497,6 +628,7 @@
       </div>
     
     </div>
+    </a>
 
 
     <div class="card horizontal-card">
@@ -511,17 +643,22 @@
       <div class="card-content">
         <h3>Tossbot</h3>
         <p>
-          Implemented a 3 DOF manipulator to toss objects at desired angle and velocities
+          Course project done for introductory robotics course. A 3 DOF manipulator to toss objects at desired angle and velocities.
         </p>
       </div>
     
     </div>
+
   </div>
 </section>
 
 <section id="technical">
   <h2 class="section-title">Technical Projects</h2>
   <div class="card-grid">
+
+    <a href="https://cfd.fossee.in/case-study-project/case-study-run/235"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
@@ -534,11 +671,15 @@
       <div class="card-content">
         <h3>Heat Transfer Enhancement Using Ultrasonic Waves in Water</h3>
         <p>
-          Using open foam I completed a case study on effects of ultrasonic waves on heat transfer rate inspired from this paper. Published the case study on FOSEE.
+          Openfoam case study on effects of ultrasonic waves on heat transfer rate. Published the case study on comparison with natural convection on FOSEE.
         </p>
       </div>
     </div>
+    </a>
 
+    <a href="https://drive.google.com/file/d/18pki7wh8VIiZJNvIzI7usVJIB8kUyBOz/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
@@ -555,7 +696,11 @@
         </p>
       </div>
     </div>
+    </a>
 
+    <a href="https://drive.google.com/file/d/1e5GSqzY6nZRAVEx5NuwZwIVnz2gMfYP8/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
@@ -566,13 +711,17 @@
     
       <!-- RIGHT: Content -->
       <div class="card-content">
-        <h3>Laser Machingng for micro heat exchangers</h3>
+        <h3>Laser Machining for micro heat exchangers</h3>
         <p>
           While studying for laser material processing elective, fabricated micro channels in aluminum using NdYAG laser
         </p>
       </div>
     </div>
+    </a>
 
+    <a href="https://drive.google.com/file/d/1tvn6hu3kRnts7UsfHdr33HXyaXNa2RlB/view?usp=drive_link"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
@@ -589,7 +738,11 @@
         </p>
       </div>
     </div>
+    </a>
 
+    <a href="https://www.aero.iitb.ac.in/satlab/"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
@@ -597,6 +750,7 @@
         <img src="assets/images/other/STADS_CAD2.jpg"
              alt="Stads">
       </div>
+    
     
       <!-- RIGHT: Content -->
       <div class="card-content">
@@ -606,7 +760,11 @@
         </p>
       </div>
     </div>
+    </a>
 
+    <a href="https://www.star-iitb.in/research/daksha"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
   
       <!-- LEFT: Image -->
@@ -623,13 +781,16 @@
         </p>
       </div>
     </div>
-
+    </a>
   </div>
 </section>
 
 <section id="teaching">
-  <h2 class="section-title">Teaching & Mentoring</h2>
+  <h2 class="section-title">Teaching & Leadership</h2>
   <div class="card-grid">
+    <a href="https://makerspace.iitb.ac.in/"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
       <div class="card-img">
         <img src="assets/images/teaching/IITB-Logo.jpg"
@@ -640,7 +801,11 @@
         <p>Selected as Teaching Assistant for firts time offering of Maker Space 101 course. Mentored students on CAD, prototyping and robotics fundamentals.</p>
       </div>
     </div>
+    </a>
 
+    <a href="https://www.aero.iitb.ac.in/satlab/"
+      target="_blank"
+      class="card-link">
     <div class="card horizontal-card">
       <div class="card-img">
         <img src="assets/images/teaching/satlogo.png"
@@ -651,11 +816,12 @@
         <p>Lead the Mechanical Subsytem, guiding juniors and maintaining cross-discipline funcionality in team </p>
       </div>
     </div>
+    </a>
   </div>
 </section>
 
 <section id="coursework">
-  <h2 class="section-title">All Coursework</h2>
+  <h2 class="section-title">Coursework</h2>
   <table>
     <tr><th>Domain</th><th>Courses</th></tr>
     <tr><td>Robotics & Control</td><td>Mathematical Structures for Control, Signals and Feedback Systems, System Theory, Intelligent Feedback and Control, Motion Planning of Autonomous Vehicles Microprocessor and Automatic Controls, Robotics, Embedded control for Robotics</td></tr>
@@ -668,47 +834,58 @@
 
 <section id="hobbies">
   <h2 class="section-title">Hobbies & Other Activities</h2>
-  <p class="section-subtitle">Interests beyond academics </p>
+  <p class="section-subtitle">Interests beyond academics</p>
 
   <div class="amazon-carousel">
+
     <button class="insta-btn left" onclick="moveHobby(-1)">❮</button>
 
-    <div class="amazon-track-wrapper"><div class="amazon-track" id="amazonTrack">
-      <div class="insta-card">
-        <div class="insta-img-wrap">
-          <img src="assets/images/hobbies/Marathon.jpg" />
+    <div class="amazon-track-wrapper">
+      <div class="amazon-track" id="amazonTrack">
+
+        <div class="insta-card">
+          <div class="insta-img-wrap">
+            <img src="assets/images/hobbies/Marathon.jpg" />
+          </div>
+          <p>Long Distance Running</p>
         </div>
-        <p>Long Distance Running</p>
-      </div>
-      <div class="insta-card">
-        <div class="insta-img-wrap">
-          <img src="assets/images/hobbies/K2S_Trail.jpg" />
+
+        <div class="insta-card">
+          <div class="insta-img-wrap">
+            <img src="assets/images/hobbies/K2S_Trail.jpg" />
+          </div>
+          <p>Trail Running</p>
         </div>
-        <p>Trail Running</p>
-      </div>
-      <div class="insta-card">
-        <div class="insta-img-wrap">
-          <img src="assets/images/hobbies/KK_Trek.jpg" />
+
+        <div class="insta-card">
+          <div class="insta-img-wrap">
+            <img src="assets/images/hobbies/KK_Trek.jpg" />
+          </div>
+          <p>Trekking</p>
         </div>
-      <p>Trekking</p>
-      </div>
-      <div class="insta-card">
-        <div class="insta-img-wrap">
-          <img src="assets/images/hobbies/Ganges_Rafting_cmp.JPG" />
+
+        <div class="insta-card">
+          <div class="insta-img-wrap">
+            <img src="assets/images/hobbies/Ganges_Rafting_cmp.JPG" />
+          </div>
+          <p>Adventure Activities</p>
         </div>
-      <p>Adventure Activities</p>
-      </div>
-      <div class="insta-card">
-        <div class="insta-img-wrap">
-          <img src="assets/images/hobbies/Muffler_CoolPic.jpg" />
+
+        <div class="insta-card">
+          <div class="insta-img-wrap">
+            <img src="assets/images/hobbies/Muffler_CoolPic.jpg" />
+          </div>
+          <p>Travel and Nature</p>
         </div>
-      <p>Travel and Nature</p>
+
       </div>
-    </div></div>
+    </div>
 
     <button class="insta-btn right" onclick="moveHobby(1)">❯</button>
+
   </div>
 </section>
+
 
 <section id="connect">
   <h2 class="section-title">Let’s Connect</h2>
@@ -725,7 +902,7 @@
   <div class="contact-icons">
     <a href="mailto:hrushikeshvm.1212@gmail.com"><i class="fas fa-envelope"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
+    <!--<a href="#"><i class="fab fa-github"></i></a>-->
   </div>
 </section>
 
@@ -757,11 +934,11 @@
   resize();
   addEventListener('resize', resize);
 
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 100; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 2 + 0.5,
+      r: Math.random() * 3 + 0.5,
       dx: (Math.random() - 0.5) * 0.2,
       dy: (Math.random() - 0.5) * 0.2
     });
@@ -769,7 +946,9 @@
 
   function animate() {
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle = 'rgba(255,143,90,0.35)';
+    ctx.fillStyle = 'rgba(255,143,0,0.35)';
+    ctx.shadowColor = "rgba(255, 140, 0, 0.35)";
+    ctx.shadowBlur = 1;
     particles.forEach(p => {
       p.x += p.dx; p.y += p.dy;
       if (p.x<0||p.x>canvas.width) p.dx*=-1;
